@@ -1,0 +1,92 @@
+:root{
+    --color1: lightcyan;
+    --color2: darkblue;
+    --color3: cyan;
+}
+
+body{
+    background-color: var(--color1);
+}
+
+header{
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size: 1.4em;
+    color: var(--color3);
+}
+
+nav{
+    padding:1%;
+}
+
+a{
+    color: var(--color1);
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+a:hover{
+    color: var(--color3);
+    text-decoration: overline;
+}
+
+main{
+    width: 60%;
+    border-left: 4px solid var(--color3);
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section{
+    margin: 0 0 3% 5%;
+}
+
+aside{
+    display:inline-flex;
+    flex-direction: column;
+    width: 20%;
+    min-height: 200px;
+    justify-content: space-between;
+    align-items: end;
+    margin-right: 5%;
+}
+
+h2{
+    font-size: 1.8em;
+}
+
+footer{
+    text-align: center;
+    font-weight: bold;
+    color: var(--color3);
+    background-color: var(--color2);
+    height: 50px;
+    line-height: 50px;
+    margin: 10px 0;
+}
+
+.projects{
+
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+li{
+    margin-left: 15px;
+}
