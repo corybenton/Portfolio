@@ -15,7 +15,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 250px;
     flex-wrap: wrap;
 }
 
@@ -77,16 +77,46 @@ footer{
     margin: 10px 0;
 }
 
-.projects{
-
+#projects{
+    /*display: inline-flexbox;*/
 }
 
-ul{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+#projects p{
+    /*text-align: center;*/
+    /*margin-top: -25px;*/
+    font-size: 24px;
+    color:red;
+    display: none;
 }
 
-li{
-    margin-left: 15px;
+
+section img{
+    width: auto;
+    height: 300px;
+    float:left;
+}
+
+p + img{
+    height:100px;
+    width: 33%;    
+}
+
+img + p{
+    float:left;
+}
+
+#me{
+    height: 80%;
+    width: auto;
+    margin-left: 6%;
+}
+
+#shelfie{
+    width:65%;
+    max-height:150px;
+    background-size: cover;
+    background-position: right;
+    margin-left: 35%;
+    position: relative;
+    margin-top: -5%;
 }
