@@ -22,6 +22,8 @@ header{
 h1{
     font-size: 1.4em;
     color: var(--color3);
+    position: relative;
+    margin-left: -25%;
 }
 
 nav{
@@ -57,7 +59,7 @@ aside{
     display:inline-flex;
     flex-direction: column;
     width: 20%;
-    min-height: 200px;
+    min-height: 500px;
     justify-content: space-between;
     align-items: end;
     margin-right: 5%;
@@ -78,31 +80,26 @@ footer{
 }
 
 #projects{
-    /*display: inline-flexbox;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects img{
+    width: 33%;
+    height: auto;
+}
+
+#projects img:first-child{
+    width: 66%;
+    height: auto;
 }
 
 #projects p{
-    /*text-align: center;*/
-    /*margin-top: -25px;*/
-    font-size: 24px;
-    color:red;
-    display: none;
-}
-
-
-section img{
-    width: auto;
-    height: 300px;
-    float:left;
-}
-
-p + img{
-    height:100px;
-    width: 33%;    
-}
-
-img + p{
-    float:left;
+    position: relative;
+    margin-left: -76px;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #me{
@@ -119,4 +116,12 @@ img + p{
     margin-left: 35%;
     position: relative;
     margin-top: -5%;
+}
+
+section img:hover{
+    border: 5px solid red;
+}
+
+ul li{
+    margin: 2% 0;
 }
