@@ -1,3 +1,4 @@
+/*set color variables*/
 :root{
     --color1: lightcyan;
     --color2: darkblue;
@@ -19,6 +20,7 @@ header{
     flex-wrap: wrap;
 }
 
+/*moves name more to the left*/
 h1{
     font-size: 1.4em;
     color: var(--color3);
@@ -27,10 +29,11 @@ h1{
 }
 
 nav{
-    padding:1%;
+    padding: 1%;
 }
 
-a{
+/*makes the links not look like links*/
+header a{
     color: var(--color1);
     text-decoration: none;
     display: inline-flex;
@@ -38,32 +41,19 @@ a{
     margin-left: 15px;
 }
 
-a:hover{
+header a:hover{
     color: var(--color3);
     text-decoration: overline;
 }
 
 main{
-    /*padding-left: 20%;*/
-    width: 60%;
-    border-left: 4px solid var(--color3);
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 section{
     margin: 0 0 3% 5%;
-}
-
-aside{
-    display:inline-flex;
-    flex-direction: column;
-    width: 20%;
-    min-height: 500px;
-    justify-content: space-between;
-    align-items: end;
-    margin-right: 5%;
 }
 
 h2{
@@ -81,23 +71,28 @@ footer{
 }
 
 #projects{
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-flex;
+    width: 65%;
+    flex-direction: row;
+    flex-wrap: wrap; 
 }
 
+/*sets images to 1/3rd size*/
 #projects img{
-    width: 33%;
-    height: auto;
+    width: 30%;
+    max-height: auto;
 }
 
-#projects img:first-child{
-    width: 66%;
-    height: auto;
+/*first image is bigger*/
+#projects #first{
+   width: 40%;
+   height: auto;
 }
 
+/*places the captions for the projects inside of the pictures*/
 #projects p{
     position: relative;
-    margin-left: -76px;
+    margin-top: -25px;
     color: red;
     font-weight: bold;
     font-size: 18px;
@@ -123,17 +118,41 @@ section img:hover{
     border: 5px solid red;
 }
 
-ul li{
+/*formatting for the contact portion*/
+ul li,
+ul li a{
     margin: 2% 0;
+    color: var(--color2);
+    text-decoration: none;
 }
 
 main h2{
-    display: none;
+    border-right: 4px solid var(--color3);
+    width: 20%;
+    margin: 0 5% ;
+    padding: 5% 5%;
+    text-align: right;
 }
 
+main div{
+    flex-direction: row;
+    display: inline-flex;
+}
+
+#projects div{
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/*
 @media screen and (max-width: 1180px) {
     h1{
         margin-left: -10%;
+    }
+
+    aside{
+        min-height: 500px;
     }
 }
 
@@ -142,6 +161,7 @@ main h2{
         margin-left:0;
     }
     
+    /*reformats project pictures to 1-2-2
     #projects img{
         width: 49.75%;
     }
@@ -149,9 +169,13 @@ main h2{
     #projects img:first-child{
         width: 99.5%;
     }
-}
+
+    aside{
+        min-height: 850px;}
+}*/
 
 @media screen and (max-width: 840px){
+    /*moves nav bar to top of screen
     nav{
         position: absolute;
         margin-top: -150px;
@@ -168,9 +192,14 @@ main h2{
         background-position: center;
         margin-left:0;
     }
+
+    aside{
+        min-height: 750px;
+    }
 }
 
 @media screen and (max-width: 685px) {
+    /*aside disappears in favor of title headers inline
     aside{
         display: none;
     }
@@ -192,6 +221,7 @@ main h2{
 }
 
 @media screen and (max-width: 490px){
+    /*moves header into 1 column
     nav{
         position:relative;
         margin-top: 0;
