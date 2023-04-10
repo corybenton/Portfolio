@@ -174,7 +174,7 @@ main div{
         min-height: 850px;}
 }*/
 
-@media screen and (max-width: 840px){
+/*@media screen and (max-width: 840px){
     /*moves nav bar to top of screen
     nav{
         position: absolute;
