@@ -50,10 +50,13 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 90%;
 }
 
 section{
     margin: 0 0 3% 5%;
+    border-left: 4px solid var(--color3);
+    padding-left: 5%;
 }
 
 h2{
@@ -71,31 +74,30 @@ footer{
 }
 
 #projects{
-    display: inline-flex;
-    width: 65%;
-    flex-direction: row;
+    display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap; 
 }
 
 /*sets images to 1/3rd size*/
 #projects img{
-    width: 30%;
-    max-height: auto;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
 }
 
-/*first image is bigger*/
-#projects #first{
-   width: 40%;
-   height: auto;
-}
-
-/*places the captions for the projects inside of the pictures*/
 #projects p{
     position: relative;
     margin-top: -25px;
+    margin-left: 5%;
     color: red;
     font-weight: bold;
     font-size: 18px;
+    z-index: 2;
+}
+
+#thirdp{
+    margin-bottom:-72%
 }
 
 #me{
@@ -116,20 +118,19 @@ footer{
 
 section img:hover{
     border: 5px solid red;
+    z-index: 1;
 }
 
 /*formatting for the contact portion*/
 ul li,
 ul li a{
-    margin: 2% 0;
+
     color: var(--color2);
     text-decoration: none;
 }
 
 main h2{
-    border-right: 4px solid var(--color3);
-    width: 20%;
-    margin: 0 5% ;
+    width: 18%;
     padding: 5% 5%;
     text-align: right;
 }
@@ -137,22 +138,22 @@ main h2{
 main div{
     flex-direction: row;
     display: inline-flex;
+    
 }
 
 #projects div{
     flex-direction: column;
-    width: 100%;
+    width: 33%;
 }
 
+#about p,
+#contact ul li{
+    margin-top: 6%;
+}
 
-/*
 @media screen and (max-width: 1180px) {
     h1{
         margin-left: -10%;
-    }
-
-    aside{
-        min-height: 500px;
     }
 }
 
@@ -160,22 +161,11 @@ main div{
     h1{
         margin-left:0;
     }
-    
-    /*reformats project pictures to 1-2-2
-    #projects img{
-        width: 49.75%;
-    }
 
-    #projects img:first-child{
-        width: 99.5%;
-    }
+}
 
-    aside{
-        min-height: 850px;}
-}*/
-
-/*@media screen and (max-width: 840px){
-    /*moves nav bar to top of screen
+@media screen and (max-width: 840px){
+    /*moves nav bar to top of screen*/
     nav{
         position: absolute;
         margin-top: -150px;
@@ -193,17 +183,10 @@ main div{
         margin-left:0;
     }
 
-    aside{
-        min-height: 750px;
-    }
 }
 
 @media screen and (max-width: 685px) {
-    /*aside disappears in favor of title headers inline
-    aside{
-        display: none;
-    }
-    
+
     main{
         width:95%;
         border-left:0;
@@ -221,7 +204,7 @@ main div{
 }
 
 @media screen and (max-width: 490px){
-    /*moves header into 1 column
+    /*moves header into 1 column*/
     nav{
         position:relative;
         margin-top: 0;
